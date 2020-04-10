@@ -6,11 +6,12 @@
   "scripts": {
     "clean": "rm -rf ./dist",
     "build": "npx webpack",
+    "check-types": "tsc",
     "lint": "eslint --ignore-path .gitignore --ext .js,.ts,.tsx .",
     "prettier": "prettier --ignore-path .gitignore --write \"**/*.+(js|json|ts|tsx)\"",
     "format": "npm run prettier -- --write",
     "check-format": "npm run prettier -- --list-different",
-    "validate": "npm-run-all --parallel check-format lint build"
+    "validate": "npm-run-all --parallel check-types check-format lint build"
   },
   "keywords": [],
   "author": "",
