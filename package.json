@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "commit": "npx git-cz",
     "clean": "rm -rf ./dist",
     "build": "npx webpack",
     "check-types": "tsc",
